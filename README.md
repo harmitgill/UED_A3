@@ -3,29 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunshine Primary School</title>
-
-    <!-- Google Fonts -->
+    <title>Sunshine School</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Swiper.js CSS for Carousel -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <!-- AOS CSS for Scroll Animations -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
-    <!-- Internal CSS -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Nunito', sans-serif;
             background-color: #F9F1E7;
             color: #4A4A4A;
+            margin: 0;
+            padding: 0;
         }
 
         .header {
@@ -36,9 +22,10 @@
         }
 
         .navbar ul {
+            list-style: none;
+            padding: 0;
             display: flex;
             justify-content: center;
-            list-style: none;
             gap: 1rem;
         }
 
@@ -52,7 +39,7 @@
 
         .navbar a:hover {
             background-color: #F7B8A0;
-            color: white;
+            color: #fff;
         }
 
         .section {
@@ -60,72 +47,19 @@
             text-align: center;
         }
 
-        .section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .footer {
+            background-color: #D4A5A5;
+            color: #333;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
         }
 
-        /* Swiper Gallery Styles */
-        .swiper-container {
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .swiper-slide img {
-            border-radius: 10px;
-            width: 100%;
-            height: auto;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #FF9D7B;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #FF9D7B;
-        }
-
-        /* Modal for Image Lightbox */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.8);
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal img {
-            max-width: 80%;
-            margin: 5% auto;
-            display: block;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 2rem;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Form Styling */
         form {
             display: flex;
             flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 1rem;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 2rem auto;
         }
 
         input, textarea, button {
@@ -147,157 +81,119 @@
             background-color: #FF9D7B;
         }
 
-        /* Footer Styling */
-        .footer {
-            background-color: #D4A5A5;
-            text-align: center;
-            padding: 1rem;
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
         }
-
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <h1>Sunshine School</h1>
-        <p>Building Bright Futures Together</p>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#academics">Academics</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-    <section id="home" class="section" data-aos="fade-up">
-        <h2>Welcome to Sunshine School!</h2>
-        <p>Sunshine School nurtures a joyful and inspiring environment for young learners.</p>
-        <img src="https://source.unsplash.com/600x300/?school-campus" alt="School Campus">
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="section" data-aos="fade-up">
-        <h2>About Us</h2>
-        <p>At Sunshine School, we focus on nurturing each child’s unique abilities. Our experienced staff is dedicated to supporting the academic, social, and emotional growth of every student.</p>
-        <img src="https://source.unsplash.com/600x300/?classroom" alt="Classroom Activity">
-    </section>
-
-    <!-- Academics Section -->
-    <section id="academics" class="section" data-aos="fade-up">
-        <h2>Academics</h2>
-        <p>Our school offers a rich curriculum designed to challenge and inspire students. We offer programs in the following areas:</p>
+<!-- Header -->
+<header class="header">
+    <h1>Sunshine School</h1>
+    <p>Building Bright Futures Together</p>
+    <nav class="navbar">
         <ul>
-            <li><strong>Primary Education</strong>: Foundational skills in reading, math, and science.</li>
-            <li><strong>Middle School</strong>: Preparing students for high school with advanced subjects and enrichment programs.</li>
-            <li><strong>High School</strong>: Preparing students for college and beyond, offering a broad range of academic and extracurricular activities.</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <img src="https://source.unsplash.com/600x300/?school-education" alt="Academics Program">
-    </section>
+    </nav>
+</header>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <p>Explore our school activities below.</p>
+<!-- Home Section -->
+<section id="home" class="section">
+    <h2>Welcome to Sunshine School</h2>
+    <p>We are committed to providing a nurturing and enriching learning environment for students of all ages.</p>
+</section>
 
-        <!-- Swiper Gallery -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/600x300/?sports" alt="Sports Event" onclick="openModal(this)">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/600x300/?art" alt="Art Activity" onclick="openModal(this)">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/600x300/?science" alt="Science Fair" onclick="openModal(this)">
-                </div>
-            </div>
+<!-- About Us Section -->
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Sunshine School, we focus on providing an inclusive and welcoming environment for all students.</p>
+</section>
 
-            <!-- Swiper Navigation Buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<!-- Academics Section -->
+<section id="academics" class="section">
+    <h2>Our Academic Programs</h2>
+    <p>Explore our comprehensive programs designed for each level of education.</p>
+    <div class="academics-links">
+        <a href="#primary">Primary Education</a><br>
+        <a href="#middle">Middle School</a><br>
+        <a href="#high">High School</a>
+    </div>
+</section>
 
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
+<!-- Primary School Section -->
+<section id="primary" class="section">
+    <h2>Primary Education at Sunshine School</h2>
+    <p>Our Primary Education program focuses on foundational literacy, numeracy, and creative development for young learners.</p>
+</section>
 
-        <!-- Modal for Image Lightbox -->
-        <div class="modal" id="imageModal">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <img id="modalImage" src="" alt="Large View">
-        </div>
-    </section>
+<!-- Middle School Section -->
+<section id="middle" class="section">
+    <h2>Middle School at Sunshine School</h2>
+    <p>The Middle School program helps students develop critical thinking skills, personal responsibility, and teamwork.</p>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section" data-aos="fade-up">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us via the contact form or directly at:</p>
-        <p>Phone: (123) 456-7890 | Email: contact@sunshineschool.com</p>
-        <p><strong>Address:</strong> 123 Main Street, Springfield, IL 62701</p>
+<!-- High School Section -->
+<section id="high" class="section">
+    <h2>High School at Sunshine School</h2>
+    <p>Our High School program prepares students for college and career with challenging coursework and extracurricular opportunities.</p>
+</section>
 
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<!-- Gallery Section -->
+<section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <p>Explore images from our school events and activities.</p>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/300" alt="Event 1">
+        <img src="https://via.placeholder.com/300" alt="Event 2">
+        <img src="https://via.placeholder.com/300" alt="Event 3">
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Sunshine School. All Rights Reserved.</p>
-    </footer>
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <script>
-        // Initialize AOS for Scroll Animations
-        AOS.init();
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
-        // Initialize Swiper for Gallery
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            }
-        });
+        <button type="submit">Send Message</button>
+    </form>
 
-        // Modal Image Gallery
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeModal = document.getElementById('closeModal');
+    <h3>Contact Details</h3>
+    <p>Phone: +123 456 7890</p>
+    <p>Email: contact@sunshineschool.com</p>
+    <p>Address: 123 Sunshine Blvd, City, Country</p>
+</section>
 
-        function openModal(image) {
-            modal.style.display = 'flex';
-            modalImage.src = image.src;
-        }
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 Sunshine School. All Rights Reserved.</p>
+</footer>
 
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            alert(`Thank you, ${name}! Your message has been sent.`);
-            this.reset();
-        });
-    </script>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        document.getElementById('formResponse').textContent = `Thank you, ${name}! Your message has been sent.`;
+        document.getElementById('contactForm').reset();
+    });
+</script>
 
 </body>
 </html>
